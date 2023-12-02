@@ -1,41 +1,18 @@
 import Topbar from "../components/Topbar";
 import Form from "react-bootstrap/Form";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
-function FaqEdit() {
+function FaqAdd() {
     const [pergunta, setPergunta] = useState([]);
     const [resposta, setResposta] = useState('');
     const { t } = useTranslation();
     const { idFaq } = useParams();
 
-    useEffect(() => {
-        recuperarFaq();
-    }, []);
-
-    const recuperarFaq = () => {
-        fetch(`http://localhost:3333/faq/readById/${idFaq}`, {
-            method: 'GET',
-        }).then((res) => {
-            if (res.ok) {
-                return res.json();
-            }
-            throw res
-        }).then(data => {
-            const content = data.Content[0];
-            
-            setPergunta(content.pergunta);
-            setResposta(content.resposta);
-            
-        }).catch(err => {
-            console.error('Erro: ', err)
-        })
-    };
-
-    function updateFaq() {
+    function createFaq() {
         if (!pergunta) {
             toast.error('Informe uma pergunta')
             return
@@ -52,21 +29,24 @@ function FaqEdit() {
             resposta: resposta
         }
 
-        editarDados(dto);
+        salvarDados(dto);
 
         setPergunta('');
         setResposta('');
     };
 
-    async function editarDados(dto) {
-        await fetch('http://localhost:3333/faq/edit', {
-            method: 'PUT',
+    const navigate = useNavigate();
+
+    async function salvarDados(dto) {
+        await fetch('http://localhost:3333/faq/create', {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
               },
             body: JSON.stringify(dto)
         }).then((res) => {
             console.log(res)
+            navigate('/admin')
         }).catch(err => {
             console.error('Erro: ', err)
         })
@@ -87,11 +67,11 @@ function FaqEdit() {
                     </Form.Group>
 
                 </form>
-                    <button onClick={updateFaq} style={{backgroundColor: "#0d6efd", border: "none", borderRadius: "5px", color: "white", width: "100px", height: "38px"}}>{t('Editar')}</button>
+                    <button onClick={createFaq} style={{backgroundColor: "#0d6efd", border: "none", borderRadius: "5px", color: "white", width: "100px", height: "38px"}}>Cadastrar</button>
             </div>
             <ToastContainer/>
         </div>
     )
 }
 
-export default FaqEdit
+export default FaqAdd

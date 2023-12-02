@@ -7,36 +7,33 @@ i18n
     resources: {
       pt: {
         translation: {
-            "Controle de Usuario": "Controle de Usuario",
+            "Controle de Usuario": "Controle de Usuário",
             "Controle de Locais": "Controle de Locais",
-            "Informacoes FAQ": "Informacoes FAQ",
-            "Adicionar usuario": "Adicionar usuario",
+            "Informacoes FAQ": "Informações FAQ",
+            "Adicionar usuario": "Adicionar usuário",
             "Adicionar local": "Adicionar local",
             "Pergunta": "Pergunta",
             "Resposta": "Resposta",
-            "Operacoes": "Operacoes",
+            "Operacoes": "Operações",
             "Editar": "Editar",
             "Excluir": "Excluir",
-            "Confirmar Exclusao do Usuario": "Confirmar Exclusao do Usuario",
-            "Confirmar Exclusao do Local": "Confirmar Exclusao do Local",
-            "Sucesso": "Sucesso",
-            "Falha": "Falha",
-            "Vitoria": "Vitoria",
-            "Derrota": "Derrota",
-            "Sonhar": "Sonhar",
-            "Realidade": "Realidade",
-            "Ter esperanca": "Ter esperanca",
-            "Desespero": "Desespero",
-            "Liberdade": "Liberdade",
-            "Prisao": "Prisao",
-            "Inovacao": "Inovacao",
-            "Tradicão": "Tradicão",
-            "Usuario": "Usuario",
+            "Confirmar Exclusão do Usuário": "Confirmar Exclusão do Usuário",
+            "Confirmar Exclusão do Local": "Confirmar Exclusão do Local",
+            "Usuario": "Usuário",
             "Email": "Email",
             "Data de nascimento": "Data de nascimento",
             "header": {
               "title": "IMIGRANTE HELP",
-              "subtitle": "Ao percebermos que você, como imigrante, pode precisar de apoio e informações ao chegar ao Brasil, queremos facilitar o seu acesso aos serviços essenciais e básicos de cidadania. Isso inclui locais para tirar o Cadastro de Pessoa Física (CPF) e o Registro Nacional Migratório (RNM), além da Assistência Social, hospitais, prefeitura, igrejas ou grupos de imigrantes próximos a você. Estamos aqui para ajudar no que for necessário."
+              "subtitle": "Ao percebermos que você, como imigrante, pode precisar de apoio e informações ao chegar ao Brasil, queremos facilitar o seu acesso aos serviços essenciais e básicos de cidadania. Isso inclui locais para tirar o Cadastro de Pessoa Física (CPF) e o Registro Nacional Migratório (RNM), além da Assistência Social, hospitais, prefeitura, igrejas ou grupos de imigrantes próximos a você. Estamos aqui para ajudar no que for necessário.",
+
+              "mapTitle": "DESCUBRA CRICIÚMA",
+              "mapSubtitle": "Explore e navegue pelo mapa interativo de Criciúma, sua porta de entrada para informações vitais. Encontre facilmente locais essenciais para imigrantes, desde órgãos públicos como a prefeitura e postos de renovação de documentos até pontos de interesse e serviços comunitários. Desenvolvido para simplificar sua integração, nosso mapa é uma ferramenta valiosa para descobrir recursos essenciais na cidade, facilitando sua jornada e fortalecendo seu senso de comunidade.",
+
+              "faqTitle": "CONSULTE NOSSO FAQ",
+              "faqSubtitle": "Encontre respostas para suas perguntas mais frequentes sobre imigração. Nosso FAQ reúne informações importantes e esclarecedoras para facilitar sua jornada como imigrante. Explore uma variedade de tópicos relevantes, desde procedimentos de visto até integração na comunidade local, e obtenha orientações úteis para uma transição mais suave.",
+
+              "forumTitle": "EXPLORE NOSSO FÓRUM",
+              "forumSubtitle": "Participe do nosso fórum para conectar-se com outros membros da comunidade e obter suporte dos administradores do site. Troque experiências, faça perguntas e compartilhe informações valiosas sobre o processo de imigração. Uma plataforma inclusiva e acolhedora para ampliar sua rede, encontrar apoio e colaborar com outros imigrantes."
             },
             "buttons": {
               "login": "Login",
@@ -72,7 +69,8 @@ i18n
             "Sua conta": "Sua conta",
             "Login": "Login",
             "Registrar": "Cadastro",
-            "idioma": "Português"
+            "idioma": "Português",
+            "Adicionar entrada": "Adicionar entrada"
         }
       },
 
@@ -90,24 +88,21 @@ i18n
             "Excluir": "Delete",
             "Confirmar Exclusao do Usuario": "Confirm User Deletion",
             "Confirmar Exclusao do Local": "Confirm Location Deletion",
-            "Sucesso": "Success",
-            "Falha": "Failure",
-            "Vitoria": "Victory",
-            "Derrota": "Defeat",
-            "Sonhar": "Dream",
-            "Realidade": "Reality",
-            "Ter esperanca": "Hope",
-            "Desespero": "Despair",
-            "Liberdade": "Freedom",
-            "Prisao": "Imprisonment",
-            "Inovacao": "Innovation",
-            "Tradicão": "Tradition",
             "Usuario": "User",
             "Email": "Email",
             "Data de nascimento": "Birth Date",
             "header": {
               "title": "IMMIGRANT HELP",
-              "subtitle": "Upon realizing that, as an immigrant, you may need support and information upon arriving in Brazil, we want to facilitate your access to essential and basic citizenship services. This includes places to obtain the Individual Taxpayer Registry (CPF) and the National Immigration Registry (RNM), as well as Social Assistance, hospitals, city hall, churches, or immigrant groups near you. We are here to help with whatever is necessary."
+              "subtitle": "Upon realizing that, as an immigrant, you may need support and information upon arriving in Brazil, we want to facilitate your access to essential and basic citizenship services. This includes places to obtain the Individual Taxpayer Registry (CPF) and the National Immigration Registry (RNM), as well as Social Assistance, hospitals, city hall, churches, or immigrant groups near you. We are here to help with whatever is necessary.",
+
+              "mapTitle": "DISCOVER CRICIÚMA",
+              "mapSubtitle": "Explore and navigate through the interactive map of Criciúma, your gateway to vital information. Easily locate essential places for immigrants, from public offices like the City Hall to document renewal centers, as well as points of interest and community services. Designed to streamline your integration, our map is a valuable tool for discovering crucial resources in the city, making your journey smoother and strengthening your sense of community.",
+
+              "faqTitle": "SEE OUR FAQ",
+              "faqSubtitle": "Discover answers to your most frequent questions about immigration. Our FAQ gathers important and enlightening information to facilitate your journey as an immigrant. Explore a variety of relevant topics, from visa procedures to integration within the local community, and gain helpful guidance for a smoother transition.",
+
+              "forumTitle": "EXPLORE OUR FORUM",
+              "forumSubtitle": "Engage in our forum to connect with other community members and seek support from site administrators. Exchange experiences, ask questions, and share valuable insights about the immigration process. An inclusive and welcoming platform to expand your network, find support, and collaborate with fellow immigrants."
             },
             "buttons": {
               "login": "Login",
@@ -144,7 +139,8 @@ i18n
             "Sua conta": "Your Account",
             "Login": "Login",
             "Registrar": "Register",
-            "idioma": "English"
+            "idioma": "English",
+            "Adicionar entrada": "Add entry"
         },
       },
       es: {
@@ -161,24 +157,21 @@ i18n
             "Excluir": "Eliminar",
             "Confirmar Exclusao do Usuario": "Confirmar Eliminación de Usuario",
             "Confirmar Exclusao do Local": "Confirmar Eliminación de Local",
-            "Sucesso": "Éxito",
-            "Falha": "Fallo",
-            "Vitoria": "Victoria",
-            "Derrota": "Derrota",
-            "Sonhar": "Soñar",
-            "Realidade": "Realidad",
-            "Ter esperanca": "Tener Esperanza",
-            "Desespero": "Desesperación",
-            "Liberdade": "Libertad",
-            "Prisao": "Prisión",
-            "Inovacao": "Innovación",
-            "Tradicão": "Tradición",
             "Usuario": "Usuario",
             "Email": "Correo electrónico",
             "Data de nascimento": "Fecha de nacimiento",
             "header": {
               "title": "IMMIGRANT HELP",
-              "subtitle": "Al darnos cuenta de que, como inmigrante, es posible que necesite apoyo e información al llegar a Brasil, queremos facilitar su acceso a servicios esenciales y básicos de ciudadanía. Esto incluye lugares para obtener el Registro de Contribuyentes Individuales (CPF) y el Registro Nacional de Migración (RNM), así como Asistencia Social, hospitales, ayuntamiento, iglesias o grupos de inmigrantes cerca de usted. Estamos aquí para ayudar en lo que sea necesario."
+              "subtitle": "Al darnos cuenta de que, como inmigrante, es posible que necesite apoyo e información al llegar a Brasil, queremos facilitar su acceso a servicios esenciales y básicos de ciudadanía. Esto incluye lugares para obtener el Registro de Contribuyentes Individuales (CPF) y el Registro Nacional de Migración (RNM), así como Asistencia Social, hospitales, ayuntamiento, iglesias o grupos de inmigrantes cerca de usted. Estamos aquí para ayudar en lo que sea necesario.",
+
+              "mapTitle": "DESCUBRE CRICIÚMA",
+              "mapSubtitle": "Explore and navigate through the interactive map of Criciúma, your gateway to vital information. Easily locate essential places for immigrants, from public offices like the City Hall to document renewal centers, as well as points of interest and community services. Designed to streamline your integration, our map is a valuable tool for discovering crucial resources in the city, making your journey smoother and strengthening your sense of community.",
+
+              "faqTitle": "VER NUESTRO FAQ",
+              "faqSubtitle": "Encuentre respuestas a sus preguntas más frecuentes sobre inmigración. Nuestro FAQ reúne información importante y esclarecedora para facilitar su camino como inmigrante. Explore una variedad de temas relevantes, desde procedimientos de visas hasta integración en la comunidad local, y obtenga orientación útil para una transición más fluida.",
+
+              "forumTitle": "EXPLORA NUESTRO FORO",
+              "forumSubtitle": "Participe en nuestro foro para conectarse con otros miembros de la comunidad y obtener apoyo de los administradores del sitio. Intercambie experiencias, haga preguntas y comparta información valiosa sobre el proceso de inmigración. Una plataforma inclusiva y acogedora para ampliar su red, encontrar apoyo y colaborar con otros inmigrantes."
             },
             "buttons": {
               "login": "Iniciar sesión",
@@ -215,7 +208,8 @@ i18n
             "Sua conta": "Tu cuenta",
             "Login": "Iniciar sesión",
             "Registrar": "Registrarse",
-            "idioma": "Español"
+            "idioma": "Español",
+            "Adicionar entrada": "Agregar entrada"
         },
       },
       fr: {
@@ -232,24 +226,21 @@ i18n
             "Excluir": "Supprimer",
             "Confirmar Exclusao do Usuario": "Confirmer la suppression de l'utilisateur",
             "Confirmar Exclusao do Local": "Confirmer la suppression de l'emplacement",
-            "Sucesso": "Succès",
-            "Falha": "Échec",
-            "Vitoria": "Victoire",
-            "Derrota": "Défaite",
-            "Sonhar": "Rêver",
-            "Realidade": "Réalité",
-            "Ter esperanca": "Avoir de l'espoir",
-            "Desespero": "Désespoir",
-            "Liberdade": "Liberté",
-            "Prisao": "Emprisonnement",
-            "Inovacao": "Innovation",
-            "Tradicão": "Tradition",
             "Usuario": "Utilisateur",
             "Email": "E-mail",
             "Data de nascimento": "Date de naissance",
             "header": {
               "title": "IMMIGRANT HELP",
-              "subtitle": "En réalisant que, en tant qu'immigrant, vous pourriez avoir besoin de soutien et d'informations en arrivant au Brésil, nous voulons faciliter votre accès aux services essentiels et basiques de citoyenneté. Cela inclut des endroits pour obtenir le Registre des Contribuables Individuels (CPF) et le Registre National des Migrations (RNM), ainsi que l'Assistance Sociale, les hôpitaux, la mairie, les églises ou les groupes d'immigrants près de chez vous. Nous sommes là pour aider en tout ce qui est nécessaire."
+              "subtitle": "En réalisant que, en tant qu'immigrant, vous pourriez avoir besoin de soutien et d'informations en arrivant au Brésil, nous voulons faciliter votre accès aux services essentiels et basiques de citoyenneté. Cela inclut des endroits pour obtenir le Registre des Contribuables Individuels (CPF) et le Registre National des Migrations (RNM), ainsi que l'Assistance Sociale, les hôpitaux, la mairie, les églises ou les groupes d'immigrants près de chez vous. Nous sommes là pour aider en tout ce qui est nécessaire.",
+
+              "mapTitle": "DÉCOUVREZ CRICIÚMA",
+              "mapSubtitle": "Explorez et naviguez à travers la carte interactive de Criciúma, votre porte d'entrée vers des informations vitales. Localisez facilement les endroits essentiels pour les immigrants, des bureaux publics tels que l'Hôtel de Ville aux centres de renouvellement de documents, ainsi que des points d'intérêt et des services communautaires. Conçu pour simplifier votre intégration, notre carte est un outil précieux pour découvrir des ressources cruciales dans la ville, rendant votre parcours plus fluide et renforçant votre sentiment d'appartenance à la communauté.",
+
+              "faqTitle": "CONSULTEZ NOTRE FAQ",
+              "faqSubtitle": "Découvrez les réponses à vos questions les plus fréquentes sur l'immigration. Notre FAQ rassemble des informations importantes et éclairantes pour faciliter votre parcours en tant qu'immigrant. Explorez une variété de sujets pertinents, des procédures de visa à l'intégration au sein de la communauté locale, et obtenez des conseils utiles pour une transition plus fluide.",
+
+              "forumTitle": "EXPLOREZ NOTRE FORUM",
+              "forumSubtitle": "Rejoignez notre forum pour vous connecter avec d'autres membres de la communauté et obtenir le soutien des administrateurs du site. Échangez des expériences, posez des questions et partagez des informations précieuses sur le processus d'immigration. Une plateforme inclusive et accueillante pour élargir votre réseau, trouver du soutien et collaborer avec d'autres immigrants."
             },
             "buttons": {
               "login": "Se connecter",
@@ -286,7 +277,8 @@ i18n
             "Sua conta": "Votre compte",
             "Login": "Connexion",
             "Registrar": "S'inscrire",
-            "idioma": "Français"
+            "idioma": "Français",
+            "Adicionar entrada": "Ajouter une entrée"
         },
       },
     },

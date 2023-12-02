@@ -5,6 +5,8 @@ import FloatingLabel from "react-bootstrap/FloatingLabel"
 import { useEffect, useState } from "react";
 import { redirect, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function SigninEdit() {
     const [username, setUsername] = useState([]);
@@ -50,22 +52,22 @@ function SigninEdit() {
     function editUser() {
 
         if (!password) {
-            alert('Digite uma senha para realizar esta ação!')
+            toast.error('Digite uma senha válida')
             return
         };
 
         if (!username) {
-            alert('Digite um nome de usuário para realizar esta ação!')
+            toast.error('Digite um nome de usuário')
             return
         };
 
         if (!email) {
-            alert('Digite um e-mail para realizar esta ação!')
+            toast.error('Digite um e-mail')
             return
         };
 
         if (!date) {
-            alert('Digite sua data de nascimento para realizar esta ação!')
+            toast.error('Digite sua data de nascimento')
             return
         };
 
@@ -104,8 +106,7 @@ function SigninEdit() {
         <div className="Signin">
             <Topbar />
 
-            <div className='LoginContainer' style={{maxWidth: '320px', margin: '0 auto'}}>
-                <h1 style={{margin: '48px 0'}}>{t('Cadastro')}</h1>
+            <div className='LoginContainer' style={{maxWidth: '320px', margin: '5em auto'}}>
                 <form>
                     <Form.Group className="mb-3" controlId="formBasicName">
                         <Form.Control type="text" placeholder="Nome" value={username} onChange={e => setUsername(e.target.value)}/>
@@ -128,6 +129,7 @@ function SigninEdit() {
                 </form>
                     <button onClick={editUser} style={{backgroundColor: "#0d6efd", border: "none", borderRadius: "5px", color: "white", width: "100px", height: "38px"}}>Editar</button>
             </div>
+            <ToastContainer />
         </div>
     )
 }

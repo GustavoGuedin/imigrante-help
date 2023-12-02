@@ -1,6 +1,9 @@
 import Topbar from "../components/Topbar";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from "react-router-dom";
 
 function Locais() {
     const [link, setLink] = useState([]);
@@ -8,12 +11,12 @@ function Locais() {
 
     function createLocation() {
         if (!local) {
-            alert('Informe o nome do local para realizar esta ação!')
+            toast.error('Informe o nome do local')
             return
         };
 
         if (!link) {
-            alert('Insira um link do local no mapa para realizar esta ação!')
+            toast.error('Insira um link do local no mapa')
             return
         };
 
@@ -28,6 +31,8 @@ function Locais() {
         setLink('');
     };
 
+    const navigate = useNavigate()
+
     async function salvarDados(dto) {
         await fetch('http://localhost:3333/locais/create', {
             method: 'POST',
@@ -37,6 +42,7 @@ function Locais() {
             body: JSON.stringify(dto)
         }).then((res) => {
             console.log(res)
+            navigate('/admin')
         }).catch(err => {
             console.error('Erro: ', err)
         })
@@ -46,8 +52,7 @@ function Locais() {
         <div className="Signin">
             <Topbar />
 
-            <div className='LoginContainer' style={{maxWidth: '320px', margin: '0 auto'}}>
-                <h1 style={{margin: '48px 0'}}>Cadastro</h1>
+            <div className='LoginContainer' style={{maxWidth: '320px', margin: '5em auto'}}>
                 <form>
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Control type="text" placeholder="Nome do local" value={local} onChange={e => setLocal(e.target.value)}/>
@@ -60,6 +65,7 @@ function Locais() {
                 </form>
                     <button onClick={createLocation} style={{backgroundColor: "#0d6efd", border: "none", borderRadius: "5px", color: "white", width: "100px", height: "38px"}}>Cadastrar</button>
             </div>
+            <ToastContainer />
         </div>
     )
 }

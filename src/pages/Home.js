@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import Topbar from '../components/Topbar';
 import Button from 'react-bootstrap/Button';
 import { AuthContext } from '../contexts/AuthContext';
+import Footer from '../components/Footer';
 
 function Home() {
   const { t } = useTranslation();
@@ -71,7 +72,68 @@ function Home() {
         maxWidth: '90%',
         margin: '0 auto',
       }}>
+        <img src='/imagem 2.webp' width='500px' alt='' />
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          maxWidth: '90%',
+          margin: '0 auto',
+          textAlign: 'end'
+        }}>
+          <div>
+            <h1 style={{ color: '#575757', fontSize: '3.5em' }}>{t('header.mapTitle')}</h1>
+            <p style={{ color: '#575757', fontWeight: 'bold' }}>{t('header.mapSubtitle')}</p>
+          </div>
+        </div>
       </div>
+
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        maxWidth: '90%',
+        margin: '0 auto',
+      }}>
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          maxWidth: '90%',
+          margin: '0 auto',
+        }}>
+          <div>
+            <h1 style={{ color: '#575757', fontSize: '3.5em' }}>{t('header.faqTitle')}</h1>
+            <p style={{ color: '#575757', fontWeight: 'bold' }}>{t('header.faqSubtitle')}</p>
+          </div>
+        </div>
+        <img src='/imagem 3.svg' width='550px' alt='' />
+      </div>
+
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        maxWidth: '90%',
+        margin: '0 auto',
+      }}>
+        <img src='/imagem 4.svg' width='500px' alt='' />
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          maxWidth: '90%',
+          margin: '0 auto',
+          textAlign: 'end'
+        }}>
+          <div>
+            <h1 style={{ color: '#575757', fontSize: '3.5em' }}>{t('header.forumTitle')}</h1>
+            <p style={{ color: '#575757', fontWeight: 'bold' }}>{t('header.forumSubtitle')}</p>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
     </div>
   );
 }

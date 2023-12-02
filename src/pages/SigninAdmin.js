@@ -3,26 +3,20 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel"
 import { useState } from "react";
-import { redirect } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
-function Signin() {
+function SigninAdmin() {
     const [username, setUsername] = useState([]);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [password2, setPassword2] = useState('');
     const [datanascimento, setDatanascimento] = useState();
     const { t } = useTranslation();
 
     function criarUser() {
-        if (!(password === password2)) {
-            toast.error('As senhas digitadas não conferem');
-            return
-        };
-
-        if (!password || !password2) {
+        if (!password) {
             toast.error('Digite uma senha válida')
             return
         };
@@ -53,11 +47,12 @@ function Signin() {
         redirect('/login');
 
         setDatanascimento('');
-        setPassword2('');
         setPassword('');
         setEmail('');
         setUsername('');
     };
+
+    const navigate = useNavigate();
 
     async function salvarDados(dto) {
         await fetch('http://localhost:3333/signin/create', {
@@ -68,6 +63,7 @@ function Signin() {
             body: JSON.stringify(dto)
         }).then((res) => {
             console.log(res)
+            navigate('/admin')
         }).catch(err => {
             console.error('Erro: ', err)
         })
@@ -77,8 +73,7 @@ function Signin() {
         <div className="Signin">
             <Topbar />
 
-            <div className='LoginContainer' style={{maxWidth: '320px', margin: '0 auto'}}>
-                <h1 style={{margin: '48px 0'}}>{t('Cadastro')}</h1>
+            <div className='LoginContainer' style={{maxWidth: '320px', margin: '5em auto'}}>
                 <form>
                     <Form.Group className="mb-3" controlId="formBasicName">
                         <Form.Control type="text" placeholder={t('Nome')} value={username} onChange={e => setUsername(e.target.value)}/>
@@ -98,10 +93,6 @@ function Signin() {
                         <Form.Control type="password" placeholder={t('Senha')} value={password} onChange={e => setPassword(e.target.value)}/>
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Control type="password" placeholder={t('Confirme sua senha')} value={password2} onChange={e => setPassword2(e.target.value)}/>
-                    </Form.Group>
-
                     <Button variant="primary" type="Button" onClick={criarUser}>
                         {t('Cadastrar')}
                     </Button>
@@ -112,4 +103,4 @@ function Signin() {
     )
 }
 
-export default Signin
+export default SigninAdmin

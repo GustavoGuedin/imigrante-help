@@ -3,10 +3,12 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from '../pages/Login';
 import Home from '../pages/Home';
 import Signin from '../pages/Signin';
+import SigninAdmin from '../pages/SigninAdmin'
 import Forum from '../pages/Forum';
 import AdminPanel from '../pages/AdminPanel';
 import Mapa from '../pages/Mapa';
 import FAQ from '../pages/FAQ';
+import FaqAdd from '../pages/FAQAdd';
 import Locais from '../pages/Locais';
 import Rotas from '../pages/Rotas';
 import SigninEdit from '../pages/SigninEdit';
@@ -25,11 +27,12 @@ function PrivateRoutes() {
           <Route path="/" Component={Home} />
           <Route path='/login' Component={Login} />
           <Route path='/signin' Component={Signin} />
-          <Route path='/signin' Component={Signin} />
+          <Route path='/useradd' Component={SigninAdmin} />
           <Route path='/signin/:idUser' Component={SigninEdit} />
           <Route path='/forum' Component={Forum} />
           <Route path='/admin' Component={AdminPanel}/>
           <Route path='/faq' Component={FAQ} />
+          <Route path='/faqadd' Component={FaqAdd} />
           <Route path='/faq/:idFaq' Component={FaqEdit} />
           <Route path='/mapa' Component={Mapa} />
           <Route path='/locais' Component={Locais} />

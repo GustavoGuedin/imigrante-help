@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from "react-i18next";
 import { AuthContext } from "../contexts/AuthContext";
 import { useContext } from "react";
+import Footer from "../components/Footer";
 
 function Forum() {
   const [listTopic, setListTopic] = useState([]);

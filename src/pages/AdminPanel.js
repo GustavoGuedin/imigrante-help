@@ -95,6 +95,21 @@ function AdminPanel() {
         });
     }
 
+    function deleteFaq(idFaq) {
+        const resultado = window.confirm(`Deseja excluir o esta entrada?`);
+
+        if (!resultado) return;
+
+        fetch(`http://localhost:3333/faq/remove/${idFaq}`, {
+            method: 'DELETE',
+        }).then((res) => {
+            console.log(res);
+            recoverAllFAQ();
+        }).catch(err => {
+            console.error('Erro: ', err);
+        });
+    }
+
     return (
         <div className="AdminPanel">
             <Topbar />
@@ -118,7 +133,7 @@ function AdminPanel() {
                             <Tab.Pane eventKey="um">
                                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                                     <div></div>
-                                    <Button variant='success' href='/signin'>{t('Adicionar usuario')}</Button>
+                                    <Button variant='success' href='/useradd'>{t('Adicionar usuario')}</Button>
                                 </div>
                                 <Table striped bordered style={{ margin: '24px 0 0 0' }}>
                                     <thead>
@@ -187,6 +202,10 @@ function AdminPanel() {
                             </Tab.Pane>
 
                             <Tab.Pane eventKey='tres'>
+                                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                    <div></div>
+                                    <Button variant='success' href='/faqadd'>{t('Adicionar entrada')}</Button>
+                                </div>
                                 <Table striped bordered style={{ margin: '24px 0 0 0' }}>
                                     <tbody>
                                         <tr>
@@ -201,6 +220,7 @@ function AdminPanel() {
                                                     <td>{faq.resposta}</td>
                                                     <td>
                                                         <Button variant="primary" size='sm' href={'/faq/' + faq.id}>{t('Editar')}</Button>
+                                                        <Button variant="danger" size='sm' onClick={() => deleteFaq(faq.id, faq.pergunta)}>{t('Excluir')}</Button>
                                                     </td>
                                                 </tr>
                                             })

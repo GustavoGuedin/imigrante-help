@@ -3,6 +3,8 @@ import Form from "react-bootstrap/Form";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function LocaisEdit() {
     const [link, setLink] = useState([]);
@@ -35,12 +37,12 @@ function LocaisEdit() {
 
     function updateLocation() {
         if (!local) {
-            alert('Informe o nome do local para realizar esta ação!')
+            toast.error('Informe o nome do local')
             return
         };
 
         if (!link) {
-            alert('Insira um link do local no mapa para realizar esta ação!')
+            toast.error('Insira um link do local no mapa')
             return
         };
 
@@ -74,8 +76,7 @@ function LocaisEdit() {
         <div className="Signin">
             <Topbar />
 
-            <div className='LoginContainer' style={{maxWidth: '320px', margin: '0 auto'}}>
-                <h1 style={{margin: '48px 0'}}>{t('Cadastro')}</h1>
+            <div className='LoginContainer' style={{maxWidth: '320px', margin: '5em auto'}}>
                 <form>
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Control type="text" placeholder={t('Nome do local')} value={local} onChange={e => setLocal(e.target.value)}/>
@@ -88,6 +89,7 @@ function LocaisEdit() {
                 </form>
                     <button onClick={updateLocation} style={{backgroundColor: "#0d6efd", border: "none", borderRadius: "5px", color: "white", width: "100px", height: "38px"}}>{t('Editar')}</button>
             </div>
+            <ToastContainer />
         </div>
     )
 }
