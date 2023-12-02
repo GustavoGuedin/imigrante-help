@@ -1,7 +1,7 @@
 import Topbar from "../components/Topbar";
 import Form from "react-bootstrap/Form";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -58,6 +58,8 @@ function FaqEdit() {
         setResposta('');
     };
 
+    const navigate = useNavigate();
+
     async function editarDados(dto) {
         await fetch('http://localhost:3333/faq/edit', {
             method: 'PUT',
@@ -67,6 +69,7 @@ function FaqEdit() {
             body: JSON.stringify(dto)
         }).then((res) => {
             console.log(res)
+            navigate('/admin')
         }).catch(err => {
             console.error('Erro: ', err)
         })
