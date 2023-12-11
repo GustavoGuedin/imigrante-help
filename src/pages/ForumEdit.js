@@ -67,7 +67,7 @@ function ForumEdit() {
             body: JSON.stringify(dto)
         }).then((res) => {
             console.log(res)
-            navigate('/forum')
+            navigate('/post/' + idForum)
         }).catch(err => {
             console.error('Erro: ', err)
         })
@@ -78,7 +78,7 @@ function ForumEdit() {
         <div className="Signin">
             <Topbar />
 
-            <div className='LoginContainer' style={{maxWidth: '320px', margin: '5em auto'}}>
+            <div className='LoginContainer' style={{maxWidth: '600px', margin: '5em auto'}}>
                 <form>
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Control type="text" placeholder="Título" value={titulo} onChange={e => setTitulo(e.target.value)}/>

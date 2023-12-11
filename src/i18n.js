@@ -70,7 +70,8 @@ i18n
             "Login": "Login",
             "Registrar": "Cadastro",
             "idioma": "Português",
-            "Adicionar entrada": "Adicionar entrada"
+            "Adicionar entrada": "Adicionar entrada",
+            "Locais comuns": "Locais comuns"
         }
       },
 
@@ -140,7 +141,8 @@ i18n
             "Login": "Login",
             "Registrar": "Register",
             "idioma": "English",
-            "Adicionar entrada": "Add entry"
+            "Adicionar entrada": "Add entry",
+            "Locais comuns": "Common places"
         },
       },
       es: {
@@ -209,7 +211,8 @@ i18n
             "Login": "Iniciar sesión",
             "Registrar": "Registrarse",
             "idioma": "Español",
-            "Adicionar entrada": "Agregar entrada"
+            "Adicionar entrada": "Agregar entrada",
+            "Locais comuns": "Lugares comunes"
         },
       },
       fr: {
@@ -278,7 +281,8 @@ i18n
             "Login": "Connexion",
             "Registrar": "S'inscrire",
             "idioma": "Français",
-            "Adicionar entrada": "Ajouter une entrée"
+            "Adicionar entrada": "Ajouter une entrée",
+            "Locais comuns": "Lieux communs"
         },
       },
     },

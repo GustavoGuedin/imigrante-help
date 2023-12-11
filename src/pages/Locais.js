@@ -52,7 +52,7 @@ function Locais() {
         <div className="Signin">
             <Topbar />
 
-            <div className='LoginContainer' style={{maxWidth: '320px', margin: '5em auto'}}>
+            <div className='LoginContainer' style={{maxWidth: '600px', margin: '5em auto'}}>
                 <form>
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Control type="text" placeholder="Nome do local" value={local} onChange={e => setLocal(e.target.value)}/>

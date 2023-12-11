@@ -30,25 +30,10 @@ function Forum() {
     })
   }
 
-    function deleteForum(idForum) {
-      const resultado = window.confirm(`Deseja excluir esta postagem?`);
-
-      if (!resultado) return;
-
-      fetch(`http://localhost:3333/forum/remove/${idForum}`, {
-          method: 'DELETE',
-      }).then((res) => {
-          console.log(res);
-          recoverAllForum();
-      }).catch(err => {
-          console.error('Erro: ', err);
-      });
-  }
-
   return(
     <div className="Forum">
       <Topbar/>
-      <div style={{maxWidth: '1000px', margin: '0 auto'}}>
+      <div style={{maxWidth: '800px', margin: '0 auto'}}>
         <h1 style={{margin: '48px 0'}}>{t('Fórum')}</h1>
         { auth && <Button variant="primary" href="/forumadd">{t('forum.createTopic')}</Button>}
 
@@ -57,11 +42,8 @@ function Forum() {
             {typeof listTopic !== "undefined" && 
               listTopic.map((topic) => { 
                 return <>
-                <ListGroup.Item className="d-flex justify-content-between align-items-start"><a href={ "post/" + topic.id }>{ topic.titulo }</a>
-                  <div>
-                  <Button variant="primary" size='sm' href={'/forumedit/' + topic.id}>{t('Editar')}</Button>
-                  <Button variant="danger" size='sm' onClick={() => deleteForum(topic.id, topic.titulo)}>{t('Excluir')}</Button>
-                  </div>
+                <ListGroup.Item className="d-flex justify-content-between align-items-start">
+                  <a style={{textDecoration: 'none', color: '#212529'}} href={ "post/" + topic.id }>{ topic.titulo }</a>
                 </ListGroup.Item>
                 </>
               })

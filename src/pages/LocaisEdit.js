@@ -1,7 +1,7 @@
 import Topbar from "../components/Topbar";
 import Form from "react-bootstrap/Form";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,6 +11,8 @@ function LocaisEdit() {
     const [local, setLocal] = useState('');
     const { idLocation } = useParams();
     const { t } = useTranslation();
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         recuperarLocation();
@@ -67,6 +69,7 @@ function LocaisEdit() {
             body: JSON.stringify(dto)
         }).then((res) => {
             console.log(res)
+            navigate('/admin')
         }).catch(err => {
             console.error('Erro: ', err)
         })
@@ -76,7 +79,7 @@ function LocaisEdit() {
         <div className="Signin">
             <Topbar />
 
-            <div className='LoginContainer' style={{maxWidth: '320px', margin: '5em auto'}}>
+            <div className='LoginContainer' style={{maxWidth: '600px', margin: '5em auto'}}>
                 <form>
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Control type="text" placeholder={t('Nome do local')} value={local} onChange={e => setLocal(e.target.value)}/>

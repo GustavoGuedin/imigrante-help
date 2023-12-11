@@ -49,7 +49,7 @@ function ForumPostAdd() {
         <div className="Signin">
             <Topbar />
 
-            <div className='LoginContainer' style={{maxWidth: '320px', margin: '5em auto'}}>
+            <div className='LoginContainer' style={{maxWidth: '600px', margin: '5em auto'}}>
                 <form>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">

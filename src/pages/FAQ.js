@@ -1,15 +1,17 @@
-import Accordion from 'react-bootstrap/Accordion';
+import { Accordion, Table } from 'react-bootstrap';
 import Topbar from '../components/Topbar';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 function FAQ() {
   const [listFaq, setListFaq] = useState([]);
+  const [listLocations, setListLocations] = useState([]);
   const { t } = useTranslation();
   let seq = 0;
 
   useEffect(() => {
     recoverAllFAQ();
+    recoverAllLocations();
   }, []);
 
   function recoverAllFAQ() {
@@ -25,7 +27,22 @@ function FAQ() {
     }).catch(err => {
         console.error('Erro: ', err)
     })
-  };  
+  };
+
+  function recoverAllLocations() {
+    fetch('http://localhost:3333/locais/recoverAll', {
+        method: 'GET',
+    }).then((res) => {
+        if (res.ok) {
+            return res.json();
+        }
+        throw res;
+    }).then(data => {
+        setListLocations(data.Content);
+    }).catch(err => {
+        console.error('Erro: ', err);
+    });
+}
 
   return (
     <div className='FAQ'>
@@ -36,14 +53,35 @@ function FAQ() {
           listFaq.map((faq) => {
             seq = seq + 1;
             return <Accordion.Item eventKey={`"${seq}"`}>
-                   <Accordion.Header>{ faq.pergunta }</Accordion.Header>
+                   <Accordion.Header><b>{ faq.pergunta }</b></Accordion.Header>
                       <Accordion.Body>
                           { faq.resposta }
                       </Accordion.Body>
                    </Accordion.Item>
           })
         }
+        <h1 style={{margin: '48px 0'}}>{t('Locais comuns')}</h1>
+        <Table striped bordered style={{ margin: '24px 0 0 0' }}>
+          <tbody>
+              <tr>
+                  <th>{t('Local')}</th>
+                  <th>{t('Link')}</th>
+              </tr>
+              {typeof listLocations !== "undefined" &&
+                  listLocations.map((location) => {
+                      return <>
+                      <tr>
+                        <td>{location.local}</td>
+                        <td><a href={location.link} target="_blank">{location.link}</a></td>
+                      </tr>
+                      </>
+                  })
+              }
+            </tbody>
+          </Table>  
+
       </Accordion>
+
     </div>
   );
 }

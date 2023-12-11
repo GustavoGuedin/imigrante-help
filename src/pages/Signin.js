@@ -2,11 +2,12 @@ import Topbar from "../components/Topbar";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel"
-import { useState } from "react";
-import { redirect } from "react-router-dom";
+import { useState, useContext } from "react";
 import { useTranslation } from "react-i18next";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from '../contexts/AuthContext';
 
 function Signin() {
     const [username, setUsername] = useState([]);
@@ -15,6 +16,9 @@ function Signin() {
     const [password2, setPassword2] = useState('');
     const [datanascimento, setDatanascimento] = useState();
     const { t } = useTranslation();
+
+    const { setAuth, auth } = useContext(AuthContext)
+    const navigate = useNavigate();
 
     function criarUser() {
         if (!(password === password2)) {
@@ -50,7 +54,7 @@ function Signin() {
         }
 
         salvarDados(dto);
-        redirect('/login');
+        verificarAcesso(dto);
 
         setDatanascimento('');
         setPassword2('');
@@ -72,6 +76,30 @@ function Signin() {
             console.error('Erro: ', err)
         })
     };
+
+    async function verificarAcesso(dto) {
+        await fetch('http://localhost:3333/login/acesso', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                  },
+                body: JSON.stringify(dto)
+            }).then((res) => {
+              if (res.ok) {
+                return res.json();
+              } else {
+                toast.error('Falha ao fazer login. Verifique suas credenciais.');
+              }
+              throw res;
+            }).then(data => {
+              setAuth(true);
+                localStorage.setItem("auth", true);
+                localStorage.setItem("user", JSON.stringify(data.content));
+                navigate('/');
+            }).catch(err => {
+              toast.error('Falha ao fazer login. Verifique suas credenciais.');
+            })
+      };
 
     return(
         <div className="Signin">

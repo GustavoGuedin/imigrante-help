@@ -11,7 +11,6 @@ import Mapa from '../pages/Mapa';
 import FAQ from '../pages/FAQ';
 import FaqAdd from '../pages/FAQAdd';
 import Locais from '../pages/Locais';
-import Rotas from '../pages/Rotas';
 import SigninEdit from '../pages/SigninEdit';
 import LocaisEdit from '../pages/LocaisEdit';
 import FaqEdit from '../pages/FAQEdit';
@@ -43,7 +42,6 @@ function PrivateRoutes() {
           <Route path='/mapa' Component={Mapa} />
           <Route path='/locais' Component={Locais} />
           <Route path='/locais/:idLocation' Component={LocaisEdit} />
-          <Route path='/rotas' Component={Rotas} />
           <Route path='/post/:idForum' Component={ForumPost} />
         </Routes>
       </Router>

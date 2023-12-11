@@ -3,7 +3,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel"
 import { useEffect, useState } from "react";
-import { redirect, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -15,6 +15,8 @@ function SigninEdit() {
     const [date, setDate] = useState();
     const { idUser } = useParams();
     const { t } = useTranslation();
+
+    const navigate = useNavigate();
     
     useEffect(() => {
         recuperaUser();
@@ -80,7 +82,6 @@ function SigninEdit() {
         }
 
         salvarDadosEditados(dto);
-        redirect('/login');
 
         setDate('');
         setPassword('');
@@ -97,6 +98,7 @@ function SigninEdit() {
             body: JSON.stringify(dto)
         }).then((res) => {
             console.log(res)
+            navigate('/admin')
         }).catch(err => {
             console.error('Erro: ', err)
         })
@@ -123,7 +125,7 @@ function SigninEdit() {
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Control type="password" placeholder="Senha" value={password} onChange={e => setPassword(e.target.value)}/>
+                        <Form.Control type="password" placeholder="Senha" onChange={e => setPassword(e.target.value)}/>
                     </Form.Group>
 
                 </form>

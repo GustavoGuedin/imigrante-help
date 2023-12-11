@@ -59,8 +59,6 @@ function Topbar() {
               }
             })()}
 
-            {/* <Nav.Link href="/admin">{t('Painel Admin')}</Nav.Link> */}
-
             {(() => {
               if (auth){
                   return (
