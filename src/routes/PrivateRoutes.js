@@ -19,6 +19,10 @@ import { I18nextProvider } from 'react-i18next';
 import i18n from '../i18n';
 import ForumEdit from '../pages/ForumEdit';
 import ForumPostAdd from '../pages/ForumPostAdd';
+import InterpreteAdd from '../pages/InterpreteAdd';
+import InterpreteEdit from '../pages/InterpreteEdit';
+import Impostos from '../pages/Impostos';
+import Interprete from '../pages/Interprete';
 
 function PrivateRoutes() {
   return (
@@ -43,6 +47,10 @@ function PrivateRoutes() {
           <Route path='/locais' Component={Locais} />
           <Route path='/locais/:idLocation' Component={LocaisEdit} />
           <Route path='/post/:idForum' Component={ForumPost} />
+          <Route path='/interpreteadd' Component={InterpreteAdd} />
+          <Route path='/interpreteedit/:idInterprete' Component={InterpreteEdit} />
+          <Route path='/impostos' Component={Impostos} />
+          <Route path='/interprete' Component={Interprete} />
         </Routes>
       </Router>
       </I18nextProvider>

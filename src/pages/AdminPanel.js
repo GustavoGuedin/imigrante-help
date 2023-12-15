@@ -12,12 +12,14 @@ function AdminPanel() {
     const [listUsers, setListUsers] = useState([]);
     const [listLocations, setListLocations] = useState([]);
     const [listFaq, setListFaq] = useState([]);
+    const [listInterpretes, setListInterpretes] = useState([]);
     const { t } = useTranslation();
 
     useEffect(() => {
         recoverAllUsers();
         recoverAllLocations();
         recoverAllFAQ();
+        recoverAllInterpretes();
     }, []);
 
     function recoverAllUsers() {
@@ -65,6 +67,21 @@ function AdminPanel() {
         });
     }
 
+    function recoverAllInterpretes() {
+        fetch('http://localhost:3333/interprete/recoverAll', {
+            method: 'GET',
+        }).then((res) => {
+            if (res.ok) {
+                return res.json();
+            }
+            throw res;
+        }).then(data => {
+            setListInterpretes(data.Content);
+        }).catch(err => {
+            console.error('Erro: ', err);
+        });
+    }
+
     function deleteUser(idUser, username) {
         const resultado = window.confirm(`Deseja excluir o usuario ${username} ?`);
 
@@ -96,7 +113,7 @@ function AdminPanel() {
     }
 
     function deleteFaq(idFaq) {
-        const resultado = window.confirm(`Deseja excluir o esta entrada?`);
+        const resultado = window.confirm(`Deseja excluir esta entrada?`);
 
         if (!resultado) return;
 
@@ -105,6 +122,21 @@ function AdminPanel() {
         }).then((res) => {
             console.log(res);
             recoverAllFAQ();
+        }).catch(err => {
+            console.error('Erro: ', err);
+        });
+    }
+
+    function deleteInterprete(idInterprete) {
+        const resultado = window.confirm(`Deseja excluir esta entrada?`);
+
+        if (!resultado) return;
+
+        fetch(`http://localhost:3333/interprete/remove/${idInterprete}`, {
+            method: 'DELETE',
+        }).then((res) => {
+            console.log(res);
+            recoverAllInterpretes();
         }).catch(err => {
             console.error('Erro: ', err);
         });
@@ -125,6 +157,9 @@ function AdminPanel() {
                             </Nav.Item>
                             <Nav.Item>
                                 <Nav.Link eventKey="tres">{t('Informacoes FAQ')}</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link eventKey="quatro">{t('Controle de Intérpretes')}</Nav.Link>
                             </Nav.Item>
                         </Nav>
                     </Col>
@@ -219,8 +254,42 @@ function AdminPanel() {
                                                     <td>{faq.pergunta}</td>
                                                     <td>{faq.resposta}</td>
                                                     <td>
-                                                        <Button variant="primary" size='sm' href={'/faq/' + faq.id}>{t('Editar')}</Button>
+                                                        <Button variant="primary" size='sm' href={'/faq/' + faq.id}>{t('Editar')}</Button> {' '}
                                                         <Button variant="danger" size='sm' onClick={() => deleteFaq(faq.id, faq.pergunta)}>{t('Excluir')}</Button>
+                                                    </td>
+                                                </tr>
+                                            })
+                                        }
+                                    </tbody>
+                                </Table>
+                            </Tab.Pane>
+
+                            <Tab.Pane eventKey='quatro'>
+                                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                    <div></div>
+                                    <Button variant='success' href='/interpreteadd'>{t('Adicionar intérprete')}</Button>
+                                </div>
+                                <Table striped bordered style={{ margin: '24px 0 0 0' }}>
+                                    <tbody>
+                                        <tr>
+                                            <th>{t('Nome')}</th>
+                                            <th>{t('Telefone')}</th>
+                                            <th>{t('E-mail')}</th>
+                                            <th>{t('Endereço')}</th>
+                                            <th>{t('Idioma')}</th>
+                                            <th>{t('Operações')}</th>
+                                        </tr>
+                                        {typeof listInterpretes !== "undefined" &&
+                                            listInterpretes.map((interprete) => {
+                                                return <tr>
+                                                    <td>{interprete.username}</td>
+                                                    <td>{interprete.telefone}</td>
+                                                    <td>{interprete.email}</td>
+                                                    <td>{interprete.endereco}</td>
+                                                    <td>{interprete.idioma}</td>
+                                                    <td>
+                                                        <Button variant="primary" size='sm' href={'/interpreteedit/' + interprete.id}>{t('Editar')}</Button> {' '}
+                                                        <Button variant="danger" size='sm' onClick={() => deleteInterprete(interprete.id)}>{t('Excluir')}</Button>
                                                     </td>
                                                 </tr>
                                             })

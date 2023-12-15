@@ -33,7 +33,13 @@ i18n
               "faqSubtitle": "Encontre respostas para suas perguntas mais frequentes sobre imigração. Nosso FAQ reúne informações importantes e esclarecedoras para facilitar sua jornada como imigrante. Explore uma variedade de tópicos relevantes, desde procedimentos de visto até integração na comunidade local, e obtenha orientações úteis para uma transição mais suave.",
 
               "forumTitle": "EXPLORE NOSSO FÓRUM",
-              "forumSubtitle": "Participe do nosso fórum para conectar-se com outros membros da comunidade e obter suporte dos administradores do site. Troque experiências, faça perguntas e compartilhe informações valiosas sobre o processo de imigração. Uma plataforma inclusiva e acolhedora para ampliar sua rede, encontrar apoio e colaborar com outros imigrantes."
+              "forumSubtitle": "Participe do nosso fórum para conectar-se com outros membros da comunidade e obter suporte dos administradores do site. Troque experiências, faça perguntas e compartilhe informações valiosas sobre o processo de imigração. Uma plataforma inclusiva e acolhedora para ampliar sua rede, encontrar apoio e colaborar com outros imigrantes.",
+
+              "taxTitle": "IMPOSTOS",
+              "taxSubtitle": "No Brasil, os principais impostos incluem o Imposto de Renda (IR), que incide sobre os ganhos individuais e empresariais; o Imposto sobre Produtos Industrializados (IPI), aplicado a bens manufaturados; o Imposto sobre Circulação de Mercadorias e Serviços (ICMS), cobrado nas transações comerciais entre estados; o Imposto sobre Propriedade de Veículos Automotores (IPVA), pago pelos proprietários de veículos; e o Imposto Predial e Territorial Urbano (IPTU), uma taxa anual sobre propriedades urbanas.",
+
+              "financeTitle": "ENCARGOS FINCANCEIROS",
+              "financeSubtitle": "Os encargos financeiros referem-se a taxas ou custos adicionais associados a empréstimos, financiamentos ou dívidas. Eles incluem juros, que são valores pagos pelo uso do dinheiro emprestado, taxas administrativas cobradas pela prestação do serviço financeiro e outros encargos, como seguros vinculados ao empréstimo. Os juros podem ser calculados de várias maneiras, como juros simples ou compostos, e são determinados com base na taxa acordada e no tempo pelo qual o dinheiro é emprestado."
             },
             "buttons": {
               "login": "Login",
@@ -71,7 +77,9 @@ i18n
             "Registrar": "Cadastro",
             "idioma": "Português",
             "Adicionar entrada": "Adicionar entrada",
-            "Locais comuns": "Locais comuns"
+            "Locais comuns": "Locais comuns",
+            "Impostos": "Impostos",
+            "Interpretes": "Intérpretes"
         }
       },
 
@@ -103,7 +111,13 @@ i18n
               "faqSubtitle": "Discover answers to your most frequent questions about immigration. Our FAQ gathers important and enlightening information to facilitate your journey as an immigrant. Explore a variety of relevant topics, from visa procedures to integration within the local community, and gain helpful guidance for a smoother transition.",
 
               "forumTitle": "EXPLORE OUR FORUM",
-              "forumSubtitle": "Engage in our forum to connect with other community members and seek support from site administrators. Exchange experiences, ask questions, and share valuable insights about the immigration process. An inclusive and welcoming platform to expand your network, find support, and collaborate with fellow immigrants."
+              "forumSubtitle": "Engage in our forum to connect with other community members and seek support from site administrators. Exchange experiences, ask questions, and share valuable insights about the immigration process. An inclusive and welcoming platform to expand your network, find support, and collaborate with fellow immigrants.",
+
+              "taxTitle": "TAXES",
+              "taxSubtitle": "In Brazil, the main taxes include Income Tax (IR), which applies to individual and business earnings; the Tax on Industrialized Products (IPI), imposed on manufactured goods; the Tax on Circulation of Goods and Services (ICMS), charged on commercial transactions between states; the Property Tax on Motor Vehicles (IPVA), paid by vehicle owners; and the Urban Property and Land Tax (IPTU), an annual fee on urban properties.",
+
+              "financeTitle": "FINANCIAL CHARGES",
+              "financeSubtitle": "Financial charges refer to fees or additional costs associated with loans, financing, or debts. They include interest, which is payment for the use of borrowed money, administrative fees charged for the provision of financial services, and other charges such as insurances linked to the loan. Interest can be calculated in various ways, such as simple or compound interest, and is determined based on the agreed-upon rate and the time for which the money is borrowed."
             },
             "buttons": {
               "login": "Login",
@@ -142,7 +156,9 @@ i18n
             "Registrar": "Register",
             "idioma": "English",
             "Adicionar entrada": "Add entry",
-            "Locais comuns": "Common places"
+            "Locais comuns": "Common places",
+            "Impostos": "Taxes",
+            "Interpretes": "Interpreters"
         },
       },
       es: {
@@ -173,7 +189,13 @@ i18n
               "faqSubtitle": "Encuentre respuestas a sus preguntas más frecuentes sobre inmigración. Nuestro FAQ reúne información importante y esclarecedora para facilitar su camino como inmigrante. Explore una variedad de temas relevantes, desde procedimientos de visas hasta integración en la comunidad local, y obtenga orientación útil para una transición más fluida.",
 
               "forumTitle": "EXPLORA NUESTRO FORO",
-              "forumSubtitle": "Participe en nuestro foro para conectarse con otros miembros de la comunidad y obtener apoyo de los administradores del sitio. Intercambie experiencias, haga preguntas y comparta información valiosa sobre el proceso de inmigración. Una plataforma inclusiva y acogedora para ampliar su red, encontrar apoyo y colaborar con otros inmigrantes."
+              "forumSubtitle": "Participe en nuestro foro para conectarse con otros miembros de la comunidad y obtener apoyo de los administradores del sitio. Intercambie experiencias, haga preguntas y comparta información valiosa sobre el proceso de inmigración. Una plataforma inclusiva y acogedora para ampliar su red, encontrar apoyo y colaborar con otros inmigrantes.",
+
+              "taxTitle": "IMPUESTOS",
+              "taxSubtitle": "En Brasil, los principales impuestos incluyen el Impuesto sobre la Renta (IR), que se aplica a las ganancias individuales y empresariales; el Impuesto sobre Productos Industrializados (IPI), impuesto a bienes manufacturados; el Impuesto sobre Circulación de Mercaderías y Servicios (ICMS), cobrado en transacciones comerciales entre estados; el Impuesto sobre la Propiedad de Vehículos Automotores (IPVA), pagado por los propietarios de vehículos; y el Impuesto Predial y Territorial Urbano (IPTU), una tasa anual sobre propiedades urbanas.",
+
+              "financeTitle": "CARGOS FINANCEIROS",
+              "financeSubtitle": "Los cargos financieros se refieren a tasas o costos adicionales asociados con préstamos, financiamientos o deudas. Incluyen intereses, que son pagos por el uso de dinero prestado, tarifas administrativas cobradas por la prestación de servicios financieros y otros cargos como seguros vinculados al préstamo. Los intereses pueden calcularse de varias maneras, como intereses simples o compuestos, y se determinan en función de la tasa acordada y el tiempo por el cual se presta el dinero."
             },
             "buttons": {
               "login": "Iniciar sesión",
@@ -212,7 +234,9 @@ i18n
             "Registrar": "Registrarse",
             "idioma": "Español",
             "Adicionar entrada": "Agregar entrada",
-            "Locais comuns": "Lugares comunes"
+            "Locais comuns": "Lugares comunes",
+            "Impostos": "Impuestos",
+            "Interpretes": "Intérpretes"
         },
       },
       fr: {
@@ -243,7 +267,13 @@ i18n
               "faqSubtitle": "Découvrez les réponses à vos questions les plus fréquentes sur l'immigration. Notre FAQ rassemble des informations importantes et éclairantes pour faciliter votre parcours en tant qu'immigrant. Explorez une variété de sujets pertinents, des procédures de visa à l'intégration au sein de la communauté locale, et obtenez des conseils utiles pour une transition plus fluide.",
 
               "forumTitle": "EXPLOREZ NOTRE FORUM",
-              "forumSubtitle": "Rejoignez notre forum pour vous connecter avec d'autres membres de la communauté et obtenir le soutien des administrateurs du site. Échangez des expériences, posez des questions et partagez des informations précieuses sur le processus d'immigration. Une plateforme inclusive et accueillante pour élargir votre réseau, trouver du soutien et collaborer avec d'autres immigrants."
+              "forumSubtitle": "Rejoignez notre forum pour vous connecter avec d'autres membres de la communauté et obtenir le soutien des administrateurs du site. Échangez des expériences, posez des questions et partagez des informations précieuses sur le processus d'immigration. Une plateforme inclusive et accueillante pour élargir votre réseau, trouver du soutien et collaborer avec d'autres immigrants.",
+
+              "taxTitle": "IMPÔTS",
+              "taxSubtitle": "Au Brésil, les principaux impôts comprennent l'Impôt sur le Revenu (IR), qui s'applique aux revenus individuels et commerciaux; la Taxe sur les Produits Industrialisés (IPI), imposée aux biens manufacturés; la Taxe sur la Circulation des Biens et Services (ICMS), prélevée sur les transactions commerciales entre les États; la Taxe sur la Propriété des Véhicules Automobiles (IPVA), payée par les propriétaires de véhicules; et la Taxe Foncière et Urbaine (IPTU), une redevance annuelle sur les propriétés urbaines.",
+
+              "financeTitle": "FRAIS FINANCIERS",
+              "financeSubtitle": "Les frais financiers font référence aux frais ou coûts supplémentaires associés aux prêts, au financement ou aux dettes. Ils incluent les intérêts, qui sont des paiements pour l'utilisation d'argent emprunté, les frais administratifs facturés pour la fourniture de services financiers et d'autres frais tels que les assurances liées au prêt. Les intérêts peuvent être calculés de différentes manières, comme les intérêts simples ou composés, et sont déterminés en fonction du taux convenu et de la durée pendant laquelle l'argent est emprunté."
             },
             "buttons": {
               "login": "Se connecter",
@@ -282,7 +312,9 @@ i18n
             "Registrar": "S'inscrire",
             "idioma": "Français",
             "Adicionar entrada": "Ajouter une entrée",
-            "Locais comuns": "Lieux communs"
+            "Locais comuns": "Lieux communs",
+            "Impostos": "Impôts",
+            "Interpretes": "Interprètes"
         },
       },
     },

@@ -8,6 +8,8 @@ import FAQ from '../pages/FAQ';
 import ForumPost from '../pages/ForumPost';
 import { I18nextProvider } from 'react-i18next';
 import i18n from '../i18n';
+import Impostos from '../pages/Impostos';
+import Interprete from '../pages/Interprete';
 
 function PublicRoutes() {
   return (
@@ -21,6 +23,8 @@ function PublicRoutes() {
           <Route path='/forum' Component={Forum} />
           <Route path='/faq' Component={FAQ} />
           <Route path='/post/:idForum' Component={ForumPost} />
+          <Route path='/impostos' Component={Impostos} />
+          <Route path='/interprete' Component={Interprete} />
         </Routes>
       </Router>
       </I18nextProvider>

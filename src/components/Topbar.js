@@ -31,6 +31,8 @@ function Topbar() {
             <Nav.Link href="/">{t('Início')}</Nav.Link>
             <Nav.Link href="/forum">{t('Fórum')}</Nav.Link>
             <Nav.Link href="/FAQ">{t('FAQ')}</Nav.Link>
+            <Nav.Link href='/impostos'>{t('Impostos')}</Nav.Link>
+            <Nav.Link href='/interprete'>{t('Interpretes')}</Nav.Link>
 
             {(() => {
               if (auth){
